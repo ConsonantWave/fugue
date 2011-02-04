@@ -4,3 +4,18 @@
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 
 @import "compass/reset";
+
+h1 { font-size: 24pt; }
+
+#piece { position: relative; }
+
+.note { position: absolute; width: 0.8%; }
+
+.track0 { background-color: red; color: red; }
+.track1 { background-color: green; color: green; }
+.track2 { background-color: yellow; color: yellow; }
+.track3 { background-color: blue; color: blue; }
+
+@for $i from 0 through 119 {
+  .pitch-#{$i} { left: 0.8% * $i; }
+}

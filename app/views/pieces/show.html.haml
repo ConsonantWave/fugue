@@ -1,0 +1,6 @@
+%h1= @piece.title
+%div#piece
+  - @piece.tracks.each_with_index do |track, track_index|
+    - track.notes.each do |note|
+      %div.note{:class => "pitch-#{note.pitch} track#{track_index}", :style => "top: #{note.start * note_height_ratio}px; min-height: #{note.length * note_height_ratio}px;"}
+        &nbsp; 
