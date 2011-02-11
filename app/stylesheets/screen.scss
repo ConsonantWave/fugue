@@ -15,6 +15,9 @@ h1 { font-size: 24pt; }
 .track1 { background-color: green; color: green; }
 .track2 { background-color: yellow; color: yellow; }
 .track3 { background-color: blue; color: blue; }
+.track4 { background-color: #FF8800; color: #FF8800; }
+.track5 { background-color: #00FFFF; color: #00FFFF; }
+.track6 { background-color: #FF00FF; color: #FF00FF; }
 
 @for $i from 0 through 119 {
   .pitch-#{$i} { left: 0.8% * $i; }

@@ -1,0 +1,15 @@
+%h1 Editing a piece
+= form_for @piece do |f|
+  %p
+    = f.label :title
+    = f.text_field :title
+  %p
+    = f.label :tempo
+    = f.text_field :tempo
+  %p Track titles:
+  %ul
+    = f.fields_for :tracks do |track_f|
+      %li
+        = track_f.text_field :title
+  %p
+    = f.submit 'Update'

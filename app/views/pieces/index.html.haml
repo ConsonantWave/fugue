@@ -1,4 +1,6 @@
 %h1 The Art of Fugue
 %ul
   - @pieces.each do |piece|
-    %li= link_to piece.title, piece
+    %li
+      = link_to piece.title, piece
+      = link_to "Destroy", piece, :confirm => "Are you sure?", :method => :delete
