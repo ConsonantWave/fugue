@@ -10,7 +10,7 @@ Installation
 
 There are two prerequisites for creating your own instance of the site. The first is [MongoDB] [2], which has its own installation instructions so I won't bore you with them here. The other requirement is that a MIDI to CSV converter, called, originally enough, [midicsv] [3]. Download the source at [http://www.fourmilab.ch/webtools/midicsv/midicsv-1.1.tar.gz] [4]. Extract the source, run
 
-  $ make
+    $ make
 
 and copy the executables into somewhere in your $PATH.
 
@@ -20,18 +20,18 @@ and copy the executables into somewhere in your $PATH.
 
 Next, grab the web app off of this repository, and run
 
-  $ bundle install
+    $ bundle install
 
 to grab any precious gems you might not already have.
 
 It's time to set up your MongoDB database. You'll need to run the following to make that happen:
 
-  $ rails g mongoid:config
-  $ rake db:setup
+    $ rails g mongoid:config
+    $ rake db:setup
 
 At this point you'll want to edit config/environments/development.rb and change the MIDI\_DIR to something that actually exists on your system. Put some MIDI files into MIDI\_DIR and run
 
-  $ rake midi:parse
+    $ rake midi:parse
 
 to add them to your database. I use the Art of Fugue MIDI files from the [Werner Icking Music Archive] [5], but go nuts, use whatever you like!
 
